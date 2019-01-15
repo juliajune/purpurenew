@@ -1,0 +1,13 @@
+@mixin box-shadow($horizOffset, $vertOffset, $blur, $size, $color, $inset: false)
+	@if $inset
+		-webkit-box-shadow: inset $horizOffset $vertOffset $blur $size $color
+		-moz-box-shadow: $horizOffset $vertOffset $blur $size $color
+		-ms-box-shadow: $horizOffset $vertOffset $blur $size $color
+		-o-box-shadow: $horizOffset $vertOffset $blur $size $color
+		box-shadow: $horizOffset $vertOffset $blur $size $color
+	@else
+		-webkit-box-shadow: inset $horizOffset $vertOffset $blur $size $color
+		-moz-box-shadow: $horizOffset $vertOffset $blur $size $color
+		-ms-box-shadow: $horizOffset $vertOffset $blur $size $color
+		-o-box-shadow: $horizOffset $vertOffset $blur $size $color
+		box-shadow: $horizOffset $vertOffset $blur $size $color
