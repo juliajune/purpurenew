@@ -1,0 +1,45 @@
+@import "_mixins/_box-shadow"
+@import "_variables"
+
+
+$button-font-size: 24px
+$button-padding: 15px
+$button-width: 200px
+
+
+%buttons
+	background-color: $purpure
+	display: block
+	color: $white
+	padding-top: $button-padding
+	padding-bottom: $button-padding
+	text-align: center
+	text-decoration: none
+	width: $button-width
+	font-size: $button-font-size
+	font-family: $secondary-font
+	text-transform: uppercase
+	
+%buttons-hover
+	text-decoration: none
+	color: $purpure
+	background-color: $white
+
+
+.button__purpure
+	@extend %buttons
+	border: 6px solid $purpure
+
+	&:hover
+		@extend %buttons-hover
+		border: 6px solid $white
+	
+.button__purpureShadow
+	@extend %buttons
+	@include box-shadow(0px, 0px, 0px, 6px, rgba(155,89,182,.5))
+
+	&:hover
+		@extend %buttons-hover
+		@include box-shadow(0px, 0px, 0px, 6px, rgba(255, 255, 255,.5))	
+
+

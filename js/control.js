@@ -1,3 +1,4 @@
+/*
 $(function(){
     'use strict';
 
@@ -8,8 +9,22 @@ $(function(){
            {
              scrollTop:$(target).offset().top
            },
-           1000, "easeInOutExpo"
+           3000, "easeInOutExpo"
         ); 
     });
 
 });
+*/
+
+
+
+  $(document).ready(function () {
+    $("a[href*=#]").on("click", function (e) {
+      var anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top
+      }, 777);
+      e.preventDefault();
+      return false;
+    });
+  });
