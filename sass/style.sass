@@ -4,14 +4,24 @@
 @import "_buttons"
 
 
+*
+	-webkit-box-sizing: border-box
+	box-sizing: border-box	
 
 
 body
-	background-color: $white
+	//background-color: $white
 	font-family: $main-font-regular
+	line-height: 29px
 	color: $gray-1
-	box-sizing: content-box
+	
 	font-size: $main-font-size
+
+	background-image: url(../img/Screendesign_Purple.jpg)
+	background-repeat: no-repeat
+	//background-size: cover
+	background-position: top center
+	z-index: 999
 
 
 a
@@ -33,12 +43,12 @@ h1
 
 h2 
 	font-size: $h2-font-size
-	margin-bottom: 55px
+	margin-bottom: 48px
 	@extend %header-font
 
 h3
 	font-size: $h3-font-size
-	margin-bottom: 35px
+	margin-bottom: 24px
 	@extend %header-font
 
 
@@ -50,8 +60,13 @@ h3
 
 .wrap
 	width: 980px
-	padding: 0 10px
-	margin: 0 auto 
+	padding:
+		top: 0px
+		bottom: 0px
+		right: 10px
+		left: 10px
+	margin: 0 auto
+	
 	
 
 .header__wrap
@@ -66,8 +81,9 @@ h3
 
 header
 	width: 100%
-	height: 100vh
-	background-image: url(../img/header-bg.jpg)
+	//height: 100vh
+	height: 500px
+	//background-image: url(../img/header-bg.jpg)
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: top center
@@ -118,10 +134,10 @@ header
 	
 	
 	.logo	
-		margin-top: 60px
+		margin-top: 57px
 
 	.header-top-menu
-		margin-top: 60px
+		margin-top: 57px
 
     
 	a 
@@ -137,7 +153,7 @@ header
 		display: flex
 
 		li
-			padding: 0 15px
+			padding: 0 18px
 
 			&:last-child
 		 		padding-right: 0px
@@ -173,7 +189,9 @@ header
 	font-family: $secondary-font
 	color: $white
 	position: relative
-	margin-bottom: 30px
+	margin-bottom: 45px
+	letter-spacing: 0.1px
+	font-stretch: ultra-condensed
 
 	&:after
 		content: ''
@@ -182,44 +200,55 @@ header
 		width: 100%
 		height: 1px
 		background-color: $white
-		bottom: -15px
+		bottom: -25px
 		
 		
 
 .subtitle
 	font-family: $third-font
+	font-size: 22px
 
 
 .go-head
 	position: absolute
-	bottom: -25px
+	bottom: -24px //
+	left: 300px
 	
 
 	
 
 
-section
-	padding: 75px 0px
+section 
+	.section_wrap
+		width: 980px
+		margin: 0 auto
+		padding:
+			top: 75px
+			right: 10px
+			bottom: 65px
+			left: 10px
+		border-bottom: 1px solid $gray-2
+		
 
-section:first-child
-	padding-top: 150px
+	&:first-child 
+		.section_wrap
+			padding-top: 150px
 
-section:last-child
-	padding-bottom: 150px
+	&:last-child
+		.section_wrap
+			padding-bottom: 150px
+			border-bottom: none
 
-
-/***ABOUT ME***/
+//ABOUT ME
 
 #about
-	background-color: yellow
-
-	.wrap
-		border-bottom: 1px solid $gray-2
+	//background-color: green
+	
 
 .bio
 	text-align: center
 	font-size: 18px
-	padding: 0px  95px 75px 95px
+	padding: 0px  95px 65px 95px
 
 	
 
@@ -240,6 +269,7 @@ section:last-child
 
 	p
 		text-align: justify
+		letter-spacing: -0.47px
 
 
 .icon
@@ -248,4 +278,23 @@ section:last-child
 		color: $purpure	
 		width: 65px
 		height: 65px
-		margin-bottom: 30px		
+		margin-bottom: 18px		
+
+
+// *** WORKS ***
+.works-box 
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+.work
+	width: 400px
+	margin-bottom: 45px
+
+	img
+		max-width: 100%
+		width: 100%

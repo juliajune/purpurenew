@@ -3,8 +3,8 @@
 
 
 $button-font-size: 24px
-$button-padding: 15px
-$button-width: 200px
+$button-padding: 8px ///
+$button-width: 205px ///
 
 
 %buttons
@@ -22,8 +22,7 @@ $button-width: 200px
 	
 %buttons-hover
 	text-decoration: none
-	color: $purpure
-	background-color: $white
+	background-color: $dark-orange
 
 
 .button__purpure
@@ -36,10 +35,10 @@ $button-width: 200px
 	
 .button__purpureShadow
 	@extend %buttons
-	@include box-shadow(0px, 0px, 0px, 6px, rgba(155,89,182,.5))
+	@include box-shadow(0px, 0px, 0px, 6px, rgba(155,89,182,.5)) 
 
 	&:hover
 		@extend %buttons-hover
-		@include box-shadow(0px, 0px, 0px, 6px, rgba(255, 255, 255,.5))	
+		@include box-shadow(0px, 0px, 0px, 6px, rgba(201, 113, 106, .5))
 
 

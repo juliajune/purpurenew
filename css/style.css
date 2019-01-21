@@ -25,7 +25,8 @@
 }
 
 /*Color*/
-/*Header backgroun color*/
+/*Header background color*/
+/*Button color*/
 /*Main font color*/
 /*Opacity header color*/
 /*Font family*/
@@ -59,7 +60,8 @@
 }
 
 /*Color*/
-/*Header backgroun color*/
+/*Header background color*/
+/*Button color*/
 /*Main font color*/
 /*Opacity header color*/
 /*Font family*/
@@ -72,11 +74,11 @@
   background-color: #9b59b6;
   display: block;
   color: #fff;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   text-align: center;
   text-decoration: none;
-  width: 200px;
+  width: 205px;
   font-size: 24px;
   font-family: "Rokkitt", serif;
   text-transform: uppercase;
@@ -84,8 +86,7 @@
 
 .button__purpure:hover, .button__purpureShadow:hover {
   text-decoration: none;
-  color: #9b59b6;
-  background-color: #fff;
+  background-color: #c9716a;
 }
 
 .button__purpure {
@@ -105,19 +106,27 @@
 }
 
 .button__purpureShadow:hover {
-  -webkit-box-shadow: inset 0px 0px 0px 6px rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.5);
-  -ms-box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.5);
-  -o-box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: inset 0px 0px 0px 6px rgba(201, 113, 106, 0.5);
+  -moz-box-shadow: 0px 0px 0px 6px rgba(201, 113, 106, 0.5);
+  -ms-box-shadow: 0px 0px 0px 6px rgba(201, 113, 106, 0.5);
+  -o-box-shadow: 0px 0px 0px 6px rgba(201, 113, 106, 0.5);
+  box-shadow: 0px 0px 0px 6px rgba(201, 113, 106, 0.5);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #fff;
   font-family: "MyriadPro-Regular", sans-serif;
+  line-height: 29px;
   color: #95a5a6;
-  box-sizing: content-box;
   font-size: 15px;
+  background-image: url(../img/Screendesign_Purple.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 999;
 }
 
 a {
@@ -140,12 +149,12 @@ h1 {
 
 h2 {
   font-size: 36px;
-  margin-bottom: 55px;
+  margin-bottom: 48px;
 }
 
 h3 {
   font-size: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
 }
 
 .container {
@@ -155,7 +164,10 @@ h3 {
 
 .wrap {
   width: 980px;
-  padding: 0 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin: 0 auto;
 }
 
@@ -167,8 +179,7 @@ h3 {
 /*HEADER*/
 header {
   width: 100%;
-  height: 100vh;
-  background-image: url(../img/header-bg.jpg);
+  height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -216,11 +227,11 @@ header:before {
 }
 
 .header-top .logo {
-  margin-top: 60px;
+  margin-top: 57px;
 }
 
 .header-top .header-top-menu {
-  margin-top: 60px;
+  margin-top: 57px;
 }
 
 .header-top a {
@@ -236,7 +247,7 @@ header:before {
 }
 
 .header-top ul li {
-  padding: 0 15px;
+  padding: 0 18px;
 }
 
 .header-top ul li:last-child {
@@ -272,7 +283,9 @@ header:before {
   font-family: "Rokkitt", serif;
   color: #fff;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
+  letter-spacing: 0.1px;
+  font-stretch: ultra-condensed;
 }
 
 .title:after {
@@ -282,43 +295,43 @@ header:before {
   width: 100%;
   height: 1px;
   background-color: #fff;
-  bottom: -15px;
+  bottom: -25px;
 }
 
 .subtitle {
   font-family: "Quicksand", sans-serif;
+  font-size: 22px;
 }
 
 .go-head {
   position: absolute;
-  bottom: -25px;
+  bottom: -24px;
+  left: 300px;
 }
 
-section {
-  padding: 75px 0px;
+section .section_wrap {
+  width: 980px;
+  margin: 0 auto;
+  padding-top: 75px;
+  padding-right: 10px;
+  padding-bottom: 65px;
+  padding-left: 10px;
+  border-bottom: 1px solid #cecece;
 }
 
-section:first-child {
+section:first-child .section_wrap {
   padding-top: 150px;
 }
 
-section:last-child {
+section:last-child .section_wrap {
   padding-bottom: 150px;
-}
-
-/***ABOUT ME***/
-#about {
-  background-color: yellow;
-}
-
-#about .wrap {
-  border-bottom: 1px solid #cecece;
+  border-bottom: none;
 }
 
 .bio {
   text-align: center;
   font-size: 18px;
-  padding: 0px  95px 75px 95px;
+  padding: 0px  95px 65px 95px;
 }
 
 .advantages-box {
@@ -337,11 +350,32 @@ section:last-child {
 
 .advantage p {
   text-align: justify;
+  letter-spacing: -0.47px;
 }
 
 .icon svg {
   color: #9b59b6;
   width: 65px;
   height: 65px;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
+}
+
+.works-box {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work {
+  width: 400px;
+  margin-bottom: 45px;
+}
+
+.work img {
+  max-width: 100%;
+  width: 100%;
 }
